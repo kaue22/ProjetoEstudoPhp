@@ -17,15 +17,15 @@ if (array_key_exists('prazo', $_GET)) {
 } else {
     $tarefa['prazo'] = '';
 }
-
-$tarefa['prioridade'] = $_GET['prioridade'];
-
+if (array_key_exists('prioridade', $_GET)) {
+    $tarefa['prioridade'] = $_GET['prioridade'];
+}
 if (array_key_exists('concluida', $_GET)) {
     $tarefa['concluida'] = $_GET['concluida'];
 } else {
     $tarefa['concluida'] = '';
 }
-$_SESSION['lista_tarefas'][] = $tarefa;
+$_SESSION['$lista_tarefas'][] = $tarefa;
 $lista_tarefas = [];
 
 if (array_key_exists('$lista_tarefas', $_SESSION)) {
