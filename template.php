@@ -19,7 +19,7 @@
                 <input type="text" name="nome" />
             </label>
 
-            <input type="submit" value="Cadastrar" />
+            <!--     <input type="submit" value="Cadastrar" /> -->
         </fieldset>
     </form>
 
@@ -39,7 +39,7 @@
         <label>
             <input type="radio" name="prioridade" value="baixa" checked /> Baixa
             <input type="radio" name="prioridade" value="media" checked /> Média
-            <input type="radio" name="prioridade" value="Alta" checked /> Alta
+            <input type="radio" name="prioridade" value="alta" checked /> Alta
         </label>
     </fieldset>
     <label>
