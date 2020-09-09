@@ -9,8 +9,8 @@
 </head>
 
 <body>
-    <h1>Gerenciador de Tarefas</h1>
 
+    <h1>Gerenciador de Tarefas</h1>
     <form>
         <fieldset>
             <legend>Nova Tarefa</legend>
