@@ -33,16 +33,21 @@ if (array_key_exists('concluida', $_GET)) {
     $tarefa['concluida'] = '';
 }
 //$_SESSION['$lista_tarefas'][] = $tarefa;
-echo ("TAREFA3");
+/*echo ("TAREFA3");
 print_r($tarefa);
 echo("<br>");
+echo ("Conexão");
+print_r($conexao);
+echo("<br>");*/
 grava_tarefa($conexao, $tarefa);
-
+/*echo("GRAVA tarefa");
+echo("<br>");
+print_r(grava_tarefa($conexao, $tarefa));*/
 $lista_tarefas = [];
-
+echo("<br>");
 if (array_key_exists('$lista_tarefas', $_SESSION)) {
 
     $lista_tarefas = busca_tarefas($conexao);
 }
-
+$lista_tarefas = busca_tarefas($conexao);
 include "template.php";
