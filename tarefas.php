@@ -1,9 +1,14 @@
 <?php
 session_start();
+require 'banco.php';
+
+
 
 if (array_key_exists('nome', $_GET) && $_GET['nome'] != '') {
     $tarefa = [];
     $tarefa['nome'] = $_GET['nome'];
+}else{
+    $tarefa['nome'] = '';
 }
 
 if (array_key_exists('descricao', $_GET)) {
@@ -19,18 +24,25 @@ if (array_key_exists('prazo', $_GET)) {
 }
 if (array_key_exists('prioridade', $_GET)) {
     $tarefa['prioridade'] = $_GET['prioridade'];
+}else{
+    $tarefa['prioridade'] = '';
 }
 if (array_key_exists('concluida', $_GET)) {
     $tarefa['concluida'] = $_GET['concluida'];
 } else {
     $tarefa['concluida'] = '';
 }
-$_SESSION['$lista_tarefas'][] = $tarefa;
+//$_SESSION['$lista_tarefas'][] = $tarefa;
+echo ("TAREFA3");
+print_r($tarefa);
+echo("<br>");
+grava_tarefa($conexao, $tarefa);
+
 $lista_tarefas = [];
 
 if (array_key_exists('$lista_tarefas', $_SESSION)) {
 
-    $lista_tarefas = $_SESSION['$lista_tarefas'];
+    $lista_tarefas = busca_tarefas($conexao);
 }
 
 include "template.php";
