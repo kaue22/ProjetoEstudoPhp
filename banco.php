@@ -37,14 +37,7 @@ function grava_tarefa($conexao, $tarefa)
         '{$tarefa['descricao']}',
         {$tarefa['prioridade']}
     )";
-    echo ("Conexão");
-    print_r($conexao);
-    echo("<br>");
-    echo ("SQL_GRAVA");
-    print_r($sqlGravar);
-    echo("<br>");
+
     //print_r(mysqli_query($conexao, $sqlGravar));
     mysqli_query($conexao, $sqlGravar);
-    echo ("Conexão Final");
-    print_r(mysqli_query($conexao, $sqlGravar));
 }

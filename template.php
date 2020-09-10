@@ -21,35 +21,35 @@
 
             <!--     <input type="submit" value="Cadastrar" /> -->
         </fieldset>
-    
-
-    <label>
-        Descrição (Opcional):
-        <textarea name="descricao"></textarea>
-    </label>
 
 
-    <label>
-        Prazo (Opcional):
-        <input type="text" name="prazo" />
-    </label>
-
-    <fieldset>
-        <legend>Prioridade:</legend>
         <label>
-            <input type="radio" name="prioridade" value="1" checked /> Baixa
-            <input type="radio" name="prioridade" value="2" /> Média
-            <input type="radio" name="prioridade" value="3" /> Alta
+            Descrição (Opcional):
+            <textarea name="descricao"></textarea>
         </label>
-    </fieldset>
-    <label>
-        Tarefa Concluída:
 
-        <input type="checkbox" name="concluido" value="sim" />
 
-    </label>
+        <label>
+            Prazo (Opcional):
+            <input type="text" name="prazo" />
+        </label>
 
-    <input type="submit" value="Cadastrar" />
+        <fieldset>
+            <legend>Prioridade:</legend>
+            <label>
+                <input type="radio" name="prioridade" value="1" checked /> Baixa
+                <input type="radio" name="prioridade" value="2" /> Média
+                <input type="radio" name="prioridade" value="3  " /> Alta
+            </label>
+        </fieldset>
+        <label>
+            Tarefa Concluída:
+
+            <input type="checkbox" name="concluido" value="sim" />
+
+        </label>
+
+        <input type="submit" value="Cadastrar" />
     </form>
 
     <table>

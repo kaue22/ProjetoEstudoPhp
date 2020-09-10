@@ -2,8 +2,6 @@
 session_start();
 require 'banco.php';
 
-
-
 if (array_key_exists('nome', $_GET) && $_GET['nome'] != '') {
     $tarefa = [];
     $tarefa['nome'] = $_GET['nome'];
@@ -33,12 +31,7 @@ if (array_key_exists('concluida', $_GET)) {
     $tarefa['concluida'] = '';
 }
 //$_SESSION['$lista_tarefas'][] = $tarefa;
-/*echo ("TAREFA3");
-print_r($tarefa);
-echo("<br>");
-echo ("Conexão");
-print_r($conexao);
-echo("<br>");*/
+
 grava_tarefa($conexao, $tarefa);
 /*echo("GRAVA tarefa");
 echo("<br>");
